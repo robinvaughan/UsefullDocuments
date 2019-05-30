@@ -1,0 +1,7 @@
+Change password for gitbase terminal:
+Open CMD command prompt
+cmdkey /list
+  Currently stored credentials:
+cmdkey /delete:git:https://github.thehartford.com/CTO/ews_apictheme.git
+ Credential deleted successfully.
+-------------------------------------------------------------------------------------------------------
