@@ -1,0 +1,12 @@
+How to deploy Database to other Application in Acquia cloud?
+
+1.	Copy database file from localhost to new Application/Site:
+      Open Git bash and navigate to localhost
+      Command: scp -r elizabe.sql.gz riverelizabe.dev@free-7940.devcloud.hosting.acquia.com:/mnt/gfs/riverelizabe.dev/backups/
+      Database file .sql is copied to mnt/gfs/riverelizabe.dev/backups/ folder.
+      
+2.	Import database to new Application/Site:
+      Connect to ssh using below command
+      Command: ssh riverelizabe.dev@free-7940.devcloud.hosting.acquia.com
+      Drop the old DB and import the new DB using the below command.
+      drush @riverelizabe.dev ah-db-import /mnt/gfs/riverelizabe.dev/backups/elizabe.sql.gz –drop
